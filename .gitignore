@@ -1,0 +1,87 @@
+# =========================================
+# 1. Sistema Operativo (Evita archivos basura)
+# =========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# =========================================
+# 2. Editores e IDEs (VS Code, IntelliJ, etc.)
+# =========================================
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# IntelliJ IDEA / Geany / Otros
+.idea/
+*.iml
+*.iws
+*.ipr
+*~
+*.swp
+*.swo
+
+# =========================================
+# 3. Entornos, Dependencias y Compilación
+# =========================================
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
+.npm
+
+# C / C++ (Binarios y objetos)
+*.o
+*.obj
+*.exe
+*.out
+*.app
+*.dSYM/
+*.elf
+*.hex
+
+# Java (Clases compiladas y jars)
+*.class
+*.jar
+*.war
+*.ear
+hs_err_pid*
+
+# =========================================
+# 4. Variables de Entorno y Configuración Local
+# =========================================
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+credentials.json
+
+# =========================================
+# 5. Logs, Caché y Temporales
+# =========================================
+logs/
+*.log
+npm-debug.log*
+dist/
+build/
+out/
+.cache/
+.parcel-cache/
+.vite/
