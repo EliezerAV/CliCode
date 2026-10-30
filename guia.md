@@ -9,7 +9,7 @@ No hay temporizador corriendo. `iniciar` guarda la hora en un archivo;
 `terminar` la lee, calcula la diferencia y guarda un registro.
 
 ## Fases
-1. [ ] Leer process.argv y distinguir comandos
+1. [ x ] Leer process.argv y distinguir comandos
 2. [ ] Guardar/leer datos en un archivo JSON (módulo fs)
 3. [ ] Implementar iniciar y terminar (fechas con Date)
 4. [ ] Implementar resumen (minutos por día, racha)
