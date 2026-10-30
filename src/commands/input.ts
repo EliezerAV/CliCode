@@ -1,5 +1,8 @@
 import process = require('node:process');
 
-process.argv.forEach((value, index) => {
-    console.log({ index, value });
-});
+function entrada(): string | undefined {
+    return process.argv[2];
+}
+
+console.log(entrada());
+module.exports = entrada;
