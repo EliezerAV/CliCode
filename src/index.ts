@@ -12,3 +12,5 @@ function saludar(usuario: Usuario): string {
 // Si intentas hacer esto, VS Code se pondrá en rojo de inmediato:
 console.log(saludar({ nombre: "eliezer", edad: 25 })); // ✅ Correcto
 // ❌ Error: El argumento de tipo 'number' no es asignable al parámetro de tipo 'Usuario'.
+
+console.log(process.argv); // Esto es un arreglo de strings que contiene los argumentos pasados al script
