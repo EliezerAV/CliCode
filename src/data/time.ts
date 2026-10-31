@@ -1,0 +1,1 @@
+//aca deberia de parsear los tiempos de entrada y salida para que se pueda hacer un resumen de la ejecucion del programa
