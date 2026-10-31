@@ -10,7 +10,7 @@ No hay temporizador corriendo. `iniciar` guarda la hora en un archivo;
 
 ## Fases
 1. [ x ] Leer process.argv y distinguir comandos
-2. [ ] Guardar/leer datos en un archivo JSON (módulo fs)
+2. [ x ] Guardar/leer datos en un archivo JSON (módulo fs)
 3. [ ] Implementar iniciar y terminar (fechas con Date)
 4. [ ] Implementar resumen (minutos por día, racha)
 5. [ ] Manejo de errores (terminar sin iniciar, doble iniciar)

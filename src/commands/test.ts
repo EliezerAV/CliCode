@@ -48,5 +48,4 @@ async function ejecutarPrueba() {
   console.log("Resultado final en memoria:", final);
 }
 
-// Ejecutamos la prueba
 ejecutarPrueba();
