@@ -1,27 +1,31 @@
 import process from 'node:process';
+import { readFile, writeFile } from 'node:fs/promises';
 
-let Tinicio = 0;
-let Tfin = 0;
+const path = 'src/data/info.json';
 
-export  function entrada(): string | undefined {
-    Tinicio = Date.now(); //buscar forma de que el resultado de esta funcion se traduzca a lo convencional
-    console.log(`Início do processo: ${Tinicio}`);
-    return process.argv[2];
+
+export function entrada(): string[] {
+    return process.argv.slice(2);
 }
 
-export  function salida(): string | undefined {
-    Tfin = Date.now();
-    console.log(`fim  do processo: ${Tfin}`);
-    return process.argv[2];
+export async function leerRegistros(): Promise<any[] | undefined> {
+    try {
+        const textoPlano = await readFile(path, 'utf-8');
+        return JSON.parse(textoPlano);
+    } catch (err) {
+        console.error('Error al leer el archivo:', err);
+        return [];
+    }
 }
 
-export function resumen(): void {
-    const tiempoTotal = Tfin - Tinicio;
-    console.log(`Tiempo total de ejecución: ${tiempoTotal} ms`);
-    //cuestion de prueba porque resumen debe de tener por lo menos variables que anteriormente recidan en un archivo que guarde fs
+export function resumen(registros: any[]): void {
+    let tiempoTotal = 0;
+
+    for (const reg of registros) {
+        if (reg.timestampFin && reg.timestampInicio) {
+            tiempoTotal += (reg.timestampFin - reg.timestampInicio);
+        }
+    }
+
+    console.log(`Tiempo total acumulado: ${tiempoTotal} ms`);
 }
-
-
-console.log(entrada());
-console.log(salida());
-console.log(resumen());
