@@ -1,1 +1,11 @@
-//aca deberia de parsear los tiempos de entrada y salida para que se pueda hacer un resumen de la ejecucion del programa
+const time: Date = new Date();
+
+export const  getDate = (): string => {
+   const hour = time.getHours();
+   const min = time.getMinutes();
+   const seg = time.getSeconds();
+    return `${hour}h :${min}m :${seg}s`;
+}
+
+console.log(getDate());
+
