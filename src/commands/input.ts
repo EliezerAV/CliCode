@@ -16,9 +16,9 @@ export  const readList = (): Sesion[] =>{
         return [];   
     }
     const readinglist = readFileSync(path, 'utf-8');
-    const readlist:Sesion = JSON.parse(readinglist);
+    const readlist:Sesion[] = JSON.parse(readinglist);
     console.log(readlist);
-    return [readlist];
+    return readlist;
 }
 
 export const writeList=(list:Sesion[]): void  => {
@@ -31,8 +31,8 @@ export function resumen(registros: any[]): void {
     let tiempoTotal = 0;
 
     for (const reg of registros) {
-        if (reg.timestampFin && reg.timestampInicio) {
-            tiempoTotal += (reg.timestampFin - reg.timestampInicio);
+        if (reg.fin && reg.inicio) {
+            tiempoTotal += (reg.fin - reg.inicio);
         }
     }
 
