@@ -1,5 +1,6 @@
 import process from 'node:process';
 import { read, readFileSync, writeFileSync } from 'node:fs';
+import {type Sesion} from '../types/sesion.ts';
 
 const path = 'src/data/info.json';
 
@@ -13,6 +14,12 @@ export  const readLits = (): string =>{
     readlist = JSON.parse(readlist);
     return readlist;
 }
+
+export const writeList=(): Sesion[] => {
+    
+}
+
+
 
 export function resumen(registros: any[]): void {
     let tiempoTotal = 0;
