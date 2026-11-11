@@ -1,5 +1,5 @@
 import process from 'node:process';
-import { readFile, writeFile } from 'node:fs/promises';
+import { read, readFileSync, writeFileSync } from 'node:fs';
 
 const path = 'src/data/info.json';
 
@@ -8,14 +8,10 @@ export function entrada(): string[] {
     return process.argv.slice(2);
 }
 
-export async function leerRegistros(): Promise<any[] | undefined> {
-    try {
-        const textoPlano = await readFile(path, 'utf-8');
-        return JSON.parse(textoPlano);
-    } catch (err) {
-        console.error('Error al leer el archivo:', err);
-        return [];
-    }
+export  const readLits = (): string =>{
+    let readlist = readFileSync(path, 'utf-8');
+    readlist = JSON.parse(readlist);
+    return readlist;
 }
 
 export function resumen(registros: any[]): void {
