@@ -2,7 +2,7 @@
 
 const date = Date.now();
 const a = Date.now();
-export const getTime= (date:number):String=>{
+export const getTime= (date:number):string=>{
     const seg = Math.floor(date / 1000);
     const min = Math.floor(seg / 60);
     const hour = Math.floor(min / 60);
