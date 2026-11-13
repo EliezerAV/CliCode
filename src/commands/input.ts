@@ -1,6 +1,7 @@
 import process from 'node:process';
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import {type Sesion} from '../types/sesion.ts';
+import { Session } from 'node:inspector';
 
 const path = 'src/data/info.json';
 
@@ -24,6 +25,22 @@ export  const readList = (): Sesion[] =>{
 export const writeList=(list:Sesion[]): void  => {
      writeFileSync(path, JSON.stringify(list, null, 2));
 }
+
+
+export const iniciar = (list:Sesion[], tema:string): void =>{
+    
+    const isOpen = list.find((s) => s.fin === undefined);
+    if (isOpen){
+        return console.error("la sesion esta abierta");
+    }else{
+        console.log("la sesion esta cerrada");
+        list.push({tema, inicio: Date.now()})
+         writeList(list);
+    }
+}
+
+
+
 
 
 
