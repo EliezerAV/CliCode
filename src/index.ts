@@ -14,5 +14,5 @@ try{
         }
     }
 }catch{
-    process.argv[1];
+    console.error(process.exit(1));
 }
