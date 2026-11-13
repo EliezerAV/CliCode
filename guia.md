@@ -23,8 +23,7 @@ No hay temporizador corriendo. `iniciar` guarda la hora en un archivo;
 tengo que tener en cuenta que funciones usar para las integraciones combinadas.
 
 ## Preguntas abiertas
-(dudas que me quedaron)
-
+como integrar un metodo de direccion de carpetas mas simple o práctico.
 
 
 
