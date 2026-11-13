@@ -2,6 +2,7 @@ import process from 'node:process';
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import {type Sesion} from '../types/sesion.ts';
 import { Session } from 'node:inspector';
+import {getTime} from '../utils/timemath.ts'
 
 const path = 'src/data/info.json';
 
@@ -18,7 +19,6 @@ export  const readList = (): Sesion[] =>{
     }
     const readinglist = readFileSync(path, 'utf-8');
     const readlist:Sesion[] = JSON.parse(readinglist);
-    console.log(readlist);
     return readlist;
 }
 
@@ -39,7 +39,18 @@ export const iniciar = (list:Sesion[], tema:string): void =>{
     }
 }
 
-
+export const terminar = (list:Sesion[]): void =>{
+    const isOpen = list.find((s)=>s.fin === undefined);
+    if (isOpen){
+        isOpen.fin = Date.now();
+        writeList(list);
+        const res = isOpen.fin - isOpen.inicio;
+        const time = getTime(res);
+        console.log(`tuvo una sesión de :  ${time}\n`);
+    }else{
+        console.error('no hay sesión abierta');
+    }
+}
 
 
 
