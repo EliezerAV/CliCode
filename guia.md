@@ -20,7 +20,7 @@ No hay temporizador corriendo. `iniciar` guarda la hora en un archivo;
 9. [ ] Bot de Discord/Telegram con recordatorio
 
 ## Estado actual
-(actualizar al final de cada sesión: qué hice, qué me trabó)
+tengo que tener en cuenta que funciones usar para las integraciones combinadas.
 
 ## Preguntas abiertas
 (dudas que me quedaron)
