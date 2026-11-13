@@ -1,8 +1,7 @@
 # Proyecto: sesion (CLI de registro de sesiones de código)
 
 ## Objetivo
-CLI en Node + TypeScript, sin web. Guarda cuánto programo cada día.
-Comandos: `sesion iniciar "<tema>"`, `sesion terminar`, `sesion resumen`.
+CLI inciar y terminar tienen que tener una integracion en busqueda de array para poder combinarlo con las funciones del input. 
 
 ## Cómo funciona (concepto clave)
 No hay temporizador corriendo. `iniciar` guarda la hora en un archivo;
