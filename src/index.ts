@@ -26,5 +26,5 @@ try{
     } else {
         console.error("Error desconocido:", err);
     }
-    console.error(process.exit(1), );
+    process.exit(1);
 }
