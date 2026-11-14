@@ -57,12 +57,12 @@ export const terminar = (list:Sesion[]): void =>{
 
 export function resumen(list: Sesion[]): void {
     let tiempoTotal = 0;
-
     for (const reg of list) {
         if (reg.fin && reg.inicio) {
             tiempoTotal += (reg.fin - reg.inicio);
         }
     }
-
-    console.log(`Tiempo total acumulado: ${tiempoTotal} ms`);
+    const total = getTime(tiempoTotal);
+    console.log(`Tiempo total acumulado: ${total}`);
+   
 }

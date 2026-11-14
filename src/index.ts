@@ -1,5 +1,5 @@
 import process from 'node:process';
-import {entrada, iniciar,terminar,readList} from './commands/input.ts';
+import {entrada, iniciar,terminar,readList, resumen} from './commands/input.ts';
 const tema = process.argv[3];
 const arg = process.argv[2];
 
@@ -17,6 +17,10 @@ try{
     if(arg === 'terminar'){
         const dataF = terminar(readList());
         (dataF);
+    }
+
+    if(arg === 'resumen'){
+        (resumen(readList()));
     }
 }catch{
     console.error(process.exit(1));
