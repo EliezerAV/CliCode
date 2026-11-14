@@ -9,19 +9,22 @@ try{
             console.error("sin tema");
         }else{
         entrada();
-        const dataI = iniciar(readList(),tema);
-        (dataI);
+         iniciar(readList(),tema);
         }
     }
 
     if(arg === 'terminar'){
-        const dataF = terminar(readList());
-        (dataF);
+        terminar(readList());
     }
 
     if(arg === 'resumen'){
         (resumen(readList()));
     }
-}catch{
-    console.error(process.exit(1));
+}catch(err){
+    if (err instanceof Error) {
+        console.error("Ocurrió un error en la aplicación:", err.message);
+    } else {
+        console.error("Error desconocido:", err);
+    }
+    console.error(process.exit(1), );
 }
