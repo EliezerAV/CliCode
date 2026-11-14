@@ -1,24 +1,21 @@
-import process from 'node:process';
 import {entrada, iniciar,terminar,readList, resumen} from './commands/input.ts';
-const tema = process.argv[3];
-const arg = process.argv[2];
 
+const [command, tema] = entrada();
 try{
-    if (arg === 'iniciar'){
+    if (command === 'iniciar'){
         if(!tema){
             console.error("sin tema");
+            process.exit(1);
         }else{
-        entrada();
          iniciar(readList(),tema);
         }
-    }
-
-    if(arg === 'terminar'){
+    }else if(command === 'terminar'){
         terminar(readList());
-    }
-
-    if(arg === 'resumen'){
-        (resumen(readList()));
+    }else if(command === 'resumen'){
+        resumen(readList());
+    }else{
+        console.error("No se ha leído ningún comando, prueba con:\niniciar\nterminar\nresumen\n");
+        process.exit(1)
     }
 }catch(err){
     if (err instanceof Error) {
