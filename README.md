@@ -1,4 +1,4 @@
-#CLIcode
+# CLIcode
 
 A small command-line tool, written in TypeScript and Node.js, that tracks how much time I spend programming. No web, no frameworks: just a CLI that reads and writes a JSON file.
 
