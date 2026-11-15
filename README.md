@@ -6,7 +6,7 @@ I built it to practice the fundamentals of backend development: parsing command-
 
 Commands
 Command	What it does
-iniciar "<topic>"	Starts a session with the given topic. Fails if a session is already open.
+iniciar "<tema>"	Starts a session with the given topic. Fails if a session is already open.
 terminar	Closes the open session and shows how long it lasted. Fails if there is none.
 resumen	Shows the total time of all closed sessions.
 
