@@ -64,6 +64,7 @@ Stack
 
 TypeScript, Node.js, node:fs, node:test, run with tsx.
 
+
 Roadmap
 [ ] Group the summary by day and calculate streaks
 [ ] Install it as a real sesion command
