@@ -2,7 +2,9 @@ import process from 'node:process';
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import {type Sesion} from '../types/sesion.ts';
 import { Session } from 'node:inspector';
+// UTILS 
 import {getTime} from '../utils/timemath.ts'
+import { getSesionTime } from '../utils/timesesion.ts';
 
 const path = 'src/data/info.json';
 
@@ -61,6 +63,7 @@ export function resumen(list: Sesion[]): void {
     for (const reg of list) {
         if (reg.fin && reg.inicio) {
             tiempoTotal += (reg.fin - reg.inicio);
+            console.log(getSesionTime(reg.inicio));
         }
     }
     const total = getTime(tiempoTotal);
